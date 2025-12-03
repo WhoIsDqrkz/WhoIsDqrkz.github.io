@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Protected Page</title>
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById("password").value;
+            // Set your password here
+            var correctPassword = "yourPassword"; 
+            
+            if (enteredPassword === correctPassword) {
+                window.location.href = "protected-content.html"; // Redirect to your main page
+            } else {
+                alert("Incorrect password");
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h1>Please enter the password to continue</h1>
+    <form onsubmit="return checkPassword();">
+        <input type="password" id="password" placeholder="Password">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
