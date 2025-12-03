@@ -10,7 +10,7 @@
         function checkPassword() {
             var enteredPassword = document.getElementById("password").value;
             
-            var encodedPassword = "OTk5Ng==";
+            var encodedPassword = "Y29ubm9y";
             var correctPassword = decodeBase64(encodedPassword);
             
             if (enteredPassword === correctPassword) {
@@ -23,7 +23,7 @@
     </script>
 </head>
 <body>
-    <h1>Please enter the password to continue</h1>
+    <h1>Please enter the password to continue. HINT: my name</h1>
     <form onsubmit="return checkPassword();">
         <input type="password" id="password" placeholder="Password">
         <input type="submit" value="Submit">
