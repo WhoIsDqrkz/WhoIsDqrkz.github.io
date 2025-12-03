@@ -3,10 +3,15 @@
 <head>
     <title>Password Protected Page</title>
     <script>
+        function decodeBase64(encodedString) {
+            return atob(encodedString);
+        }
+
         function checkPassword() {
             var enteredPassword = document.getElementById("password").value;
-            // Set your password here
-            var correctPassword = "9996"; 
+            
+            var encodedPassword = "OTk5Ng==";
+            var correctPassword = decodeBase64(encodedPassword);
             
             if (enteredPassword === correctPassword) {
                 window.location.href = "protected-content.html"; // Redirect to your main page
